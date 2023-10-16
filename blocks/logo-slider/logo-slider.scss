@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.block-logo-slider {
+
+    .wrap{
+        display: flex;
+        align-items: center;
+        .title{
+            margin-right: 50px;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 2px;
+            min-width: 200px;
+        }
+
+        @include media-breakpoint-down(sm){
+            display: block;
+            .title{
+                margin: 0 auto 30px;
+                text-align: center;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xs){
+        .splide__slide{
+            text-align: center;
+        }
+    }
+}

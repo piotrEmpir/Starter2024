@@ -1,0 +1,22 @@
+.wp-pagenavi{
+    margin-top: var(--wp--preset--spacing--100);
+    text-align: center;
+    span, a{
+        display: inline-block;
+        line-height: 45px;
+        min-width: 45px;
+        padding: 0 5px;
+        margin: 0 2px 4px;
+        @include trans;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+    .current{
+        background: var(--wp--preset--color--primary);
+        color: #fff;
+    }
+    a:hover{
+        background: var(--wp--preset--color--secondary);
+    }
+}

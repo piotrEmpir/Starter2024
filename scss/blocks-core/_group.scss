@@ -1,0 +1,12 @@
+.wp-block-group{
+
+    &.is-style-center_450{
+        text-align: center;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px;
+        border-radius: $media-border-radius;
+    }
+
+}

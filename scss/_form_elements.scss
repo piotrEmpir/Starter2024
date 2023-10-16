@@ -1,0 +1,71 @@
+$form-item-color: var(--wp--preset--color--quaternary);
+label {
+
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=tel],
+button,
+textarea,
+select,
+.select2-container--default .select2-selection--single{
+    background: transparent;
+    height: 56px;
+    font-family: var(--wp--preset--font-family--main-font);
+    border: 0 none;
+    border-bottom: 2px solid var(--wp--preset--color--quaternary);
+    color: $form-item-color;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: var(--wp--preset--font-size--sm);
+    width: 100%;
+
+}
+input[type=number]{
+    padding-right: 5px;
+}
+input[type=submit],
+input[type=submit].btn,
+button.btn {
+    cursor: pointer;
+    transition: color 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
+    background-color: var(--wp--preset--color--primary);
+    border-radius: 50px;
+    border: 0 none;
+    color: #fff;
+    font-family: inherit;
+    font-size: clamp(14px, 0.875rem + ((1vw - 7.68px) * 0.481), 18px);
+    font-weight: 600;
+    line-height: inherit;
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+button {
+    cursor: pointer;
+}
+
+.select2-container--default .select2-selection--single{
+    padding: 0;
+    .select2-selection__rendered{
+        margin-top: 6px;
+    }
+}
+.select2-dropdown{
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);
+}
+
+
+
+textarea {
+    background: var(--wp--preset--color--secondary);;
+    height: 120px;
+    padding: 10px;
+}

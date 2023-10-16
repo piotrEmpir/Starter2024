@@ -1,0 +1,43 @@
+
+{
+    "name": "acf/logo-slider",
+    "title": "logo-slider",
+    "description": "",
+    "style": [ "file:./logo-slider.css" ],
+    "category": "layout",
+    "icon": "block-default",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "logo-slider.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        },
+        "alignText": true,
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": true
+        },
+        "typography": {
+            "lineHeight": true,
+            "fontSize": true
+        },
+        "fullHeight": true
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "red", "label": "Red" },
+        { "name": "green", "label": "Green" },
+        { "name": "blue", "label": "Blue" }
+    ]
+}
+
