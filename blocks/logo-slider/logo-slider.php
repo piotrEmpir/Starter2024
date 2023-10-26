@@ -29,13 +29,14 @@ if ( ! empty( $block['align'] ) ) {
 
 $style="";
 
+if(isset($block['style'])){
 $tmp = get_block_wrapper_attributes($block['style']);
 preg_match('/style="([^"]+)"/', $tmp, $matches);
 
 if($matches[1])
     $style = $matches[1];
 
-
+}
 
 ?>
 

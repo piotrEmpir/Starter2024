@@ -76,7 +76,7 @@
 					"slug": "main-font"
 				},
 				{
-					"fontFamily": "\"Times New Roman\", serif",
+					"fontFamily": "Oswald, \"Times New Roman\", serif",
 					"name": "Secondary Font",
 					"slug": "secondary-font"
 				}

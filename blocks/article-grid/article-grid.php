@@ -24,18 +24,6 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
-
-
-$style="";
-
-$tmp = get_block_wrapper_attributes($block['style']);
-preg_match('/style="([^"]+)"/', $tmp, $matches);
-
-if($matches[1])
-    $style = $matches[1];
-
-
-
 ?>
 
 <style type="text/css">
@@ -44,76 +32,54 @@ if($matches[1])
 	}
 </style>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php echo esc_attr( $style ); ?>">
-	<?php if ( have_rows( 'items' ) ): ?>
-		<div class="wrap">
-            <?php while ( have_rows( 'items' ) ) : the_row(); ?>
-                <?php if ( get_row_layout() == 'article' ) : ?>
-                    <?php $article = get_sub_field( 'article' ); ?>
-                    <?php if ( $article ) : ?>
-                        <?php foreach ( $article as $post_ids ) : ?>
+<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+
+    <?php
+
+    $post_num = the_field( 'number' );
+
+    $args = array(
+        'numberposts' => $post_num ,
+        'post_type' => 'post'
+    );
+
+    $query = new WP_Query( $args );
+
+    ?>
+
+    <?php if( $query->have_posts() ) :
+        while ( $query->have_posts() ) : $query->the_post();
+        post_by_id(get_the_ID());
+        endwhile;
+    endif; ?>
+
+    <?php wp_reset_query(); ?>
 
 
-                            <article  class="article-list-item">
-                                <?php if(get_the_post_thumbnail( $post_id, 'post-thumbnail' )){ ?>
-                                <figure class="thumb">
-                                    <a href="<?php echo get_permalink( $post_ids ); ?>">
-                                    <?php echo get_the_post_thumbnail( $post_id, 'post-thumbnail' ); ?>
-                                    </a>
-                                </figure>
-                                <?php } ?>
+	<?php the_field( 'type' ); ?>
 
-                                <h3 class="has-lg-font-size">
-                                    <a href="<?php echo get_permalink( $post_ids ); ?>"><?php echo get_the_title( $post_ids ); ?></a>
-                                </h3>
-
-                                <div class="excerpt">
-                                    <?php echo get_the_excerpt($post_id); ?>
-                                </div>
-
-                                <a href="<?php echo get_permalink( $post_ids ); ?>" class="more"><?php echo get_the_title( $post_ids ); ?></a>
-
-                            </article>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                <?php elseif ( get_row_layout() == 'custom_content' ) : ?>
-                    <article class="article-list-item">
-                        <?php $link = get_sub_field( 'link' ); ?>
-                        <?php $image = get_sub_field( 'image' ); ?>
-                        <?php if ( $image ) : ?>
-                        <figure class="thumb">
-                            <?php if ( $link ) : ?>
-                                <a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
-                            <?php endif; ?>
-                                <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-                            <?php if ( $link ) : ?>
-                                </a>
-                            <?php endif; ?>
-                        </figure>
-                        <?php endif; ?>
-
-                        <h3 class="has-lg-font-size">
-                            <?php if ( $link ) : ?>
-                                <a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
-                            <?php endif; ?>
-                            <?php the_sub_field( 'title' ); ?>
-                            <?php if ( $link ) : ?>
-                                </a>
-                            <?php endif; ?>
-                        </h3>
-
-                        <div class="excerpt">
-                            <?php the_sub_field( 'excerpt' ); ?>
-                        </div>
-
-                        <?php if ( $link ) : ?>
-                            <a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="more"><?php echo esc_html( $link['title'] ); ?></a>
-                        <?php endif; ?>
-                    </article>
-                <?php endif; ?>
-            <?php endwhile; ?>
-        </div>
-	<?php else: ?>
-		<?php if(is_admin()) echo '<p>Please go to edit mode to add content</p>'; ?>
+	<?php $categories = get_field( 'categories' ); ?>
+	<?php if ( $categories ) : ?>
+		<?php $get_terms_args = array(
+			'taxonomy' => 'category',
+			'hide_empty' => 0,
+			'include' => $categories,
+		); ?>
+		<?php $terms = get_terms( $get_terms_args ); ?>
+		<?php if ( $terms ) : ?>
+			<?php foreach ( $terms as $term ) : ?>
+				<a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
+			<?php endforeach; ?>
+		<?php endif; ?>
+	<?php endif; ?>
+	<?php $posts = get_field( 'posts' ); ?>
+	<?php if ( $posts ) : ?>
+		<?php foreach ( $posts as $post_ids ) : ?>
+			<a href="<?php echo get_permalink( $post_ids ); ?>"><?php echo get_the_title( $post_ids ); ?></a>
+		<?php endforeach; ?>
+	<?php endif; ?>
+	<?php $more = get_field( 'more' ); ?>
+	<?php if ( $more ) : ?>
+		<a href="<?php echo esc_url( $more['url'] ); ?>" target="<?php echo esc_attr( $more['target'] ); ?>"><?php echo esc_html( $more['title'] ); ?></a>
 	<?php endif; ?>
 </div>
