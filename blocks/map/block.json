@@ -1,0 +1,42 @@
+
+{
+    "name": "acf/map",
+    "title": "Map",
+    "description": "",
+    "style": [ "file:./map.css" ],
+    "category": "layout",
+    "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' xmlns:v='https://vecta.io/nano'><defs><clipPath id='A'><path d='M0-78.117h202.191v-94.862H0z' transform='translate(0 172.979)' fill='none'/></clipPath></defs><g clip-path='url(#A)'><path d='M5.456 10.771a1.24 1.24 0 0 1-1.346 1.114l-.579-.024.404-2.264h.538c.605 0 1.117.375.982 1.174m2.758.085c.336-1.948-1.117-2.965-3-2.965H1.541L.142 15.879h2.691l.431-2.421c.23.047.465.071.699.073 1.951 0 3.862-.484 4.252-2.675m8.983-2.965h-2.8l-2.327 4.502-.996-4.502H8.263l2.018 7.989h2.193zm6.698.736c-.877-.438-1.624-.733-3.313-.733-1.585 0-3.627.508-3.929 2.247-.209 1.194.694 1.786 1.65 2.223l1.31.579c.354.189.602.414.55.71-.065.343-.694.508-1.113.508-.825 0-1.493-.284-2.331-.875l-1.165 1.821c.943.579 1.65.994 3.509.994 2.305 0 3.523-.899 3.81-2.27.262-1.184-.615-1.834-1.545-2.295l-1.31-.615c-.34-.177-.602-.378-.55-.626.039-.284.511-.52.995-.52.982 0 1.597.284 2.278.698zM0 .035h23.984v1.758H0zm.035 22.191h23.984v1.758H.035z'/></g></svg>",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "map.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        },
+        "alignText": true,
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": true
+        },
+        "typography": {
+            "lineHeight": true,
+            "fontSize": true
+        },
+        "fullHeight": true
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "red", "label": "Red" },
+        { "name": "green", "label": "Green" },
+        { "name": "blue", "label": "Blue" }
+    ]
+}

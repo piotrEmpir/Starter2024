@@ -27,24 +27,11 @@ if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
 
-$style="";
-
-if(isset($block['style'])){
-$tmp = get_block_wrapper_attributes($block['style']);
-preg_match('/style="([^"]+)"/', $tmp, $matches);
-
-if($matches[1])
-    $style = $matches[1];
-
-}
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php echo esc_attr( $style ); ?>">
+<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 	<div class="wrap">
-        <?php if ( $title = get_field( 'title' ) ) : ?>
-            <div class="title"><?php echo esc_html( $title ); ?></div>
-        <?php endif; ?>
         <?php if ( have_rows( 'logos' ) ) : ?>
             <div id="logo_slider<?=$rand_num;?>" class="splide" aria-label="Logo slider">
             <div class="splide__track">
