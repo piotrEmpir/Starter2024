@@ -25,6 +25,13 @@
               </svg>
 		</a>
 
+
+		<button class="menu-open">
+			<span class="label"><?php echo __('Menu', 'wbdvpl');?></span>
+			<span class="ico"><i></i></span>
+		</button>
+
+
 		<div class="nav-wrap">
 			<?php
 				wp_nav_menu( array(
@@ -42,11 +49,6 @@
 				<span class="ico"><i></i></span>
 			</button>
 		</div>
-
-		<button class="menu-open">
-			<span class="label"><?php echo __('Menu', 'wbdvpl');?></span>
-			<span class="ico"><i></i></span>
-		</button>
 
 	</div>
 </header>

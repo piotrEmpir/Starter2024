@@ -136,9 +136,6 @@ function post_by_id($id){?>
             <div class="thumb"><?php echo get_the_post_thumbnail( $id, 'medium' ); ?></div>
             <h3><?php echo get_the_title(  $id ); ?></h3>
         </a>
-
-
-
     </article>
 
 <?php
