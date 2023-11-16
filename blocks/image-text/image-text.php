@@ -24,25 +24,38 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
-?>
+	$attrs = $is_preview ? ' class="'.esc_attr( $classes ).'" ' : get_block_wrapper_attributes([ 'class' => $classes]); ?>
 
-<style type="text/css">
-	<?php echo '#' . $id; ?> {
-		/* Add styles that use ACF values here */
-	}
-</style>
+<div id="<?php echo esc_attr( $id ); ?>" <?php echo $attrs; ?>  >
+	<div class="wrap <?php the_field( 'order' ); ?> <?php the_field( 'style' ); ?>">
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
-	<?php $image = get_field( 'image' ); ?>
-	<?php if ( $image ) : ?>
-		<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-	<?php endif; ?>
-	<?php the_field( 'title' ); ?>
-	<?php the_field( 'text' ); ?>
-	<?php $link = get_field( 'link' ); ?>
-	<?php if ( $link ) : ?>
-		<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
-	<?php endif; ?>
-	<?php the_field( 'order' ); ?>
-	<?php the_field( 'style' ); ?>
+		<div class="image">
+			<?php $image = get_field( 'image' ); ?>
+			<?php if ( $image ) : ?>
+				<img srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'full' ); ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+
+			<?php endif; ?>
+		</div>
+
+		<div class="text">
+			<?php if(get_field( 'title' )) {?>
+				<h2><?php the_field( 'title' ); ?></h2>
+			<?php } ?>
+			<?php if(get_field( 'text' )) {?>
+				<?php the_field( 'text' ); ?>
+			<?php } ?>
+			<?php $link = get_field( 'link' ); ?>
+			<?php if ( $link ) : ?>
+				<div class="wp-block-buttons wp-block-buttons-is-layout-flex">
+					<div class="wp-block-button">
+						<a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $link['url'] ); ?>"
+					target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+					</div>
+				</div>
+			<?php endif; ?>
+		</div>
+
+	</div>
+
+
 </div>

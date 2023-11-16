@@ -7,6 +7,8 @@ function register_acf_blocks(){
 
 
 
+register_block_type( __DIR__ . '/contact-card' ); 
+register_block_type( __DIR__ . '/intro-image' ); 
 register_block_type( __DIR__ . '/testimonials' ); 
 register_block_type( __DIR__ . '/logo-grid' ); 
 register_block_type( __DIR__ . '/employees' );

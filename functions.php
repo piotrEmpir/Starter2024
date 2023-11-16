@@ -6,13 +6,17 @@ load_theme_textdomain( 'wbdvpl', get_template_directory() . '/languages' );
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 1000, 9999 );
+set_post_thumbnail_size( 1400, 788, true );
 
 add_theme_support( 'wp-block-styles' );
 add_editor_style( 'style.css' );
 
 if ( function_exists( 'add_image_size' ) ) {
-    add_image_size( 'mobile-thumbnail', 480, 200, true );
+    add_image_size( 'image-4k', 3840, 2160, true );
+    add_image_size( 'image-fullhd', 1920, 1080, true );
+    add_image_size( 'image-laptop', 1400, 788, true );
+    add_image_size( 'image-tablet', 800, 450, true );
+    add_image_size( 'image-phone', 500, 280, true );
 }
 
 add_theme_support(
@@ -127,16 +131,9 @@ function action_init() {
 }
 add_action( 'init', 'action_init' );
 
+function my_acf_init() {
 
-
-function post_by_id($id){?>
-
-    <article class="post_item">
-        <a href="<?php echo get_the_permalink(  $id ); ?>">
-            <div class="thumb"><?php echo get_the_post_thumbnail( $id, 'medium' ); ?></div>
-            <h3><?php echo get_the_title(  $id ); ?></h3>
-        </a>
-    </article>
-
-<?php
+    acf_update_setting('google_api_key', get_field( 'google_maps_api_key', 'option' ));
 }
+
+add_action('acf/init', 'my_acf_init');

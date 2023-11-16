@@ -1,0 +1,39 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.block-contact-card {
+
+
+    .card{
+        display: flex;
+    }
+    .thumb{
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    .info{
+        padding: var(--wp--style--block-gap);
+    }
+
+    .wrap.list{
+        .thumb img{
+            height: 100%;
+            object-fit: cover;
+        }
+        .card + .card{
+            margin-top: var(--wp--style--block-gap);
+        }
+    }
+
+    .wrap.grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--wp--style--block-gap);
+
+        .card{
+            flex-flow: column;
+        }
+    }
+}

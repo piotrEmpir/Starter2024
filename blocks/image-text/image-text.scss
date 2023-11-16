@@ -1,7 +1,62 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-image-text {
-}
+    .wrap{
+        display: flex;
+    }
+    .image{
+        flex: 0 0 50%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .text{
+        flex: 0 0 50%;
+    }
 
+    &.has-background{
+        .text{
+            padding: var(--wp--style--block-gap);
+        }
+    }
+
+    &.alignfull .text{
+        padding-left: var(--wp--style--block-gap);
+        padding-right: var(--wp--style--block-gap);
+    }
+
+    @include media-breakpoint-up(md){
+        .image-text{
+            .text{
+                padding-left: var(--wp--style--block-gap);
+            }
+        }
+
+        .text-image{
+            .image{
+                order: 10;
+            }
+            .text{
+                order: 1;
+                padding-right: var(--wp--style--block-gap);
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .wrap{
+            flex-flow: column;
+            .image{
+                order: 1;
+            }
+            .text{
+                order: 2;
+            }
+        }
+        .text{
+            padding-top: var(--wp--style--block-gap)
+        }
+    }
+}

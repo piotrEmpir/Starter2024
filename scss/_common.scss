@@ -64,3 +64,60 @@ body{
         --wp--preset--spacing--130: 60px;
     }
 }
+
+.splide__arrows {
+    .splide__arrow{
+        position: absolute;
+        top: 50%;
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+
+        &:disabled,
+        &[disabled]{
+            opacity: 0;
+        }
+
+        path{
+            fill: var(--wp--preset--color--primary);
+            @include trans;
+        }
+
+        &.splide__arrow--prev{
+            left: 0;
+            transform: translateX(-100%) scaleX(-1);
+        }
+        &.splide__arrow--next{
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        &:hover,
+        &:focus{
+            path{
+                fill: var(--wp--preset--color--secondary);
+            }
+        }
+    }
+}
+.splide__pagination{
+    margin: var(--wp--style--block-gap) 0 0;
+    padding: 0;
+
+    li{
+        margin: 0 5px 10px;
+    }
+
+    button{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 0;
+
+        &:hover,
+        &:focus,
+        &.is-active{
+            background: var(--wp--preset--color--secondary);
+        }
+    }
+}

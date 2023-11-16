@@ -1,0 +1,17 @@
+
+{
+    "name": "acf/intro-image",
+    "title": "intro-image",
+    "description": "",
+    "style": [ "file:./intro-image.css" ],
+    "category": "layout",
+    "icon": "block-default",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "intro-image.php"
+    },
+    "supports": {
+        "anchor": true,
+        "fullHeight": true
+    }
+}

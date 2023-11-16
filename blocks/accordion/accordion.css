@@ -1,1 +1,2 @@
-
+.block-accordion .ac-title{position:relative;padding-right:1em;cursor:pointer}.block-accordion .ac-title .toggler{position:absolute;top:50%;right:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:1em;height:1em}.block-accordion .ac-title .toggler:after,.block-accordion .ac-title .toggler:before{position:absolute;content:"";height:2px;top:50%;left:0px;right:0px;background:var(--wp--preset--color--primary)}.block-accordion .ac-title .toggler:before{-webkit-transform:rotate(90deg);transform:rotate(90deg);-webkit-transform-origin:center;transform-origin:center}.block-accordion .ac-content{display:none}body.wp-admin .block-accordion .ac-content{display:block}
+/*# sourceMappingURL=accordion.css.map */

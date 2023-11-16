@@ -26,60 +26,45 @@ if ( ! empty( $block['align'] ) ) {
 }
 ?>
 
-<style type="text/css">
-	<?php echo '#' . $id; ?> {
-		/* Add styles that use ACF values here */
-	}
-</style>
-
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 
-    <?php
+    <div class="wrap">
+        <?php
+		$post_num = get_field( 'number' );
+		$args = array(
+			'posts_per_page' => $post_num ,
+			'post_type' => 'post'
+		);
 
-    $post_num = the_field( 'number' );
+		if(get_field( 'type' ) == 'selected' && get_field( 'posts' ) ){
+			$args['post__in'] = get_field( 'posts' );
+		}
 
-    $args = array(
-        'numberposts' => $post_num ,
-        'post_type' => 'post'
-    );
-
-    $query = new WP_Query( $args );
-
-    ?>
-
-    <?php if( $query->have_posts() ) :
-        while ( $query->have_posts() ) : $query->the_post();
-        post_by_id(get_the_ID());
-        endwhile;
-    endif; ?>
-
-    <?php wp_reset_query(); ?>
+		if(get_field( 'type' ) == 'category' && get_field( 'categories' ) ){
+			$args['category__in'] = get_field( 'categories' );
+		}
+		$query = new WP_Query( $args );
+		?>
+        <?php if( $query->have_posts() ) :
+			while ( $query->have_posts() ) : $query->the_post();
+				//post_by_id(get_the_ID());
+				get_template_part( 'partials/listing-article' );
+			endwhile;
+		endif; ?>
+        <?php wp_reset_query(); ?>
+    </div>
 
 
-	<?php the_field( 'type' ); ?>
 
-	<?php $categories = get_field( 'categories' ); ?>
-	<?php if ( $categories ) : ?>
-		<?php $get_terms_args = array(
-			'taxonomy' => 'category',
-			'hide_empty' => 0,
-			'include' => $categories,
-		); ?>
-		<?php $terms = get_terms( $get_terms_args ); ?>
-		<?php if ( $terms ) : ?>
-			<?php foreach ( $terms as $term ) : ?>
-				<a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
-			<?php endforeach; ?>
-		<?php endif; ?>
-	<?php endif; ?>
-	<?php $posts = get_field( 'posts' ); ?>
-	<?php if ( $posts ) : ?>
-		<?php foreach ( $posts as $post_ids ) : ?>
-			<a href="<?php echo get_permalink( $post_ids ); ?>"><?php echo get_the_title( $post_ids ); ?></a>
-		<?php endforeach; ?>
-	<?php endif; ?>
-	<?php $more = get_field( 'more' ); ?>
-	<?php if ( $more ) : ?>
-		<a href="<?php echo esc_url( $more['url'] ); ?>" target="<?php echo esc_attr( $more['target'] ); ?>"><?php echo esc_html( $more['title'] ); ?></a>
-	<?php endif; ?>
+
+    <?php $more = get_field( 'more' ); ?>
+    <?php if ( $more ) : ?>
+		<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-layout-2 wp-block-buttons-is-layout-flex">
+			<div class="wp-block-button">
+				<a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $more['url'] ); ?>"
+			target="<?php echo esc_attr( $more['target'] ); ?>"><?php echo esc_html( $more['title'] ); ?></a>
+			</div>
+		</div>
+    <?php endif; ?>
+
 </div>

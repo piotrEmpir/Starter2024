@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log('OK');
     });
 
-    let acTitles = document.querySelectorAll('.ac_title');
+    let acTitles = document.querySelectorAll('.ac-title');
     acTitles.forEach(function (acTitle) {
         acTitle.addEventListener("click", function () {
             this.classList.toggle('active');

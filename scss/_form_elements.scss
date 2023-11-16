@@ -10,7 +10,6 @@ input[type=date],
 input[type=number],
 input[type=password],
 input[type=tel],
-button,
 textarea,
 select,
 .select2-container--default .select2-selection--single{
@@ -31,17 +30,16 @@ input[type=number]{
 }
 input[type=submit],
 input[type=submit].btn,
-button.btn {
+button.btn,
+button{
     cursor: pointer;
     transition: color 0.4s ease-in-out,
     background-color 0.4s ease-in-out;
     background-color: var(--wp--preset--color--primary);
-    border-radius: 50px;
     border: 0 none;
     color: #fff;
     font-family: inherit;
     font-size: clamp(14px, 0.875rem + ((1vw - 7.68px) * 0.481), 18px);
-    font-weight: 600;
     line-height: inherit;
     padding: calc(0.667em + 2px) calc(1.333em + 2px);
     text-decoration: none;

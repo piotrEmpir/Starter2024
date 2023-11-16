@@ -1,7 +1,41 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-accordion {
+    .ac-title{
+        position: relative;
+        padding-right: 1em;
+        cursor: pointer;
+
+        .toggler{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 1em;
+            height: 1em;
+
+            &:after,
+            &:before{
+                position: absolute;
+                content: '';
+                height: 2px;
+                top: 50%;
+                left: 0px;
+                right: 0px;
+                background: var(--wp--preset--color--primary);
+            }
+            &:before{
+                transform: rotate(90deg);
+                transform-origin: center;
+            }
+        }
+    }
+    .ac-content{
+        display: none;
+    }
 }
 
+body.wp-admin .block-accordion .ac-content{
+    display: block;
+}

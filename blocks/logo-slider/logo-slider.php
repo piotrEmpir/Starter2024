@@ -67,11 +67,10 @@ if ( ! empty( $block['align'] ) ) {
 <script>
   document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '#logo_slider<?=$rand_num;?>',{
-        arrows: false,
-        pagination: false,
+        arrows: true,
+        pagination: true,
         //autoWidth: true,
         focus    : 0,
-        type   : 'loop',
         perPage: 5,
         gap: 20,
         width: '100%',

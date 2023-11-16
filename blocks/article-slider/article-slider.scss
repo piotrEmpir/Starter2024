@@ -2,54 +2,7 @@
 @import '../../scss/mixins';
 
 .block-article-slider {
-
-    .inner{
-        position: relative;
+    .wp-block-buttons{
+        margin-top: 50px;
     }
-
-
-    .info{
-        position: absolute;
-        top: 0;
-        left: 0;
-        max-width: 250px;
-        h2{
-            margin: 0;
-            line-height: 1;
-        }
-        .wp-block-post-excerpt__more-link{
-            margin-top: 20px;
-        }
-        @include media-breakpoint-down(sm){
-            max-width: 220px;
-        }
-    }
-    .wrap{
-        transform: translateX(420px);
-        @include media-breakpoint-down(md){
-            transform: translateX(300px);
-        }
-        @include media-breakpoint-down(sm){
-            transform: translateX(250px);
-        }
-    }
-
-    @include media-breakpoint-down(xs){
-        .info{
-            position: relative;
-            max-width: 100%;
-            margin-bottom: 50px;
-        }
-        .wrap{
-            transform: translateX(0);
-        }
-    }
-
-    .splide__slide article{
-        height: 100%;
-    }
-}
-.block-article-slider-external{
-    overflow: hidden;
-    padding: 0;
 }
