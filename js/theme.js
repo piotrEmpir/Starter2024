@@ -8,22 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         navWrap.classList.toggle('active');
         body.classList.toggle('menu_open');
-
-        console.log('OK');
+        menuOpen.setAttribute('aria-expanded',`${!(menuOpen.getAttribute('aria-expanded') === 'true')}`);
+        menuClose.setAttribute('aria-expanded',`${!(menuClose.getAttribute('aria-expanded') === 'true')}`);
     });
 
     menuClose.addEventListener("click", function (event) {
         event.preventDefault();
         navWrap.classList.toggle('active');
         body.classList.toggle('menu_open');
+        menuOpen.setAttribute('aria-expanded',`${!(menuOpen.getAttribute('aria-expanded') === 'true')}`);
+        menuClose.setAttribute('aria-expanded',`${!(menuClose.getAttribute('aria-expanded') === 'true')}`);
 
-        console.log('OK');
     });
 
     let acTitles = document.querySelectorAll('.ac-title');
     acTitles.forEach(function (acTitle) {
         acTitle.addEventListener("click", function () {
             this.classList.toggle('active');
+            this.setAttribute('aria-expanded',`${!(menuClose.getAttribute('aria-expanded') === 'true')}`);
             let acContent = this.nextElementSibling;
             acContent.style.display = acContent.style.display === "none" ? "block" : "none";
         });

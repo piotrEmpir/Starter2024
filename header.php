@@ -26,7 +26,7 @@
 		</a>
 
 
-		<button class="menu-open">
+		<button class="menu-open" aria-expanded="false">
 			<span class="label"><?php echo __('Menu', 'wbdvpl');?></span>
 			<span class="ico"><i></i></span>
 		</button>
@@ -44,7 +44,7 @@
 				<?php dynamic_sidebar( 'header' ); ?>
 			<?php endif; ?>
 
-			<button class="menu-close">
+			<button class="menu-close" aria-expanded="false">
 				<span class="label"><?php echo __('Close', 'wbdvpl');?></span>
 				<span class="ico"><i></i></span>
 			</button>

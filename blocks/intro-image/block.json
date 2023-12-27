@@ -3,7 +3,8 @@
     "name": "acf/intro-image",
     "title": "intro-image",
     "description": "",
-    "style": [ "file:./intro-image.css" ],
+    "style": [ "file:./intro-image.css", "splide-css" ],
+    "script": "splide-js",
     "category": "layout",
     "icon": "block-default",
     "acf": {
