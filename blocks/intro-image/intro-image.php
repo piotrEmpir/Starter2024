@@ -46,8 +46,8 @@ $classes .= ' alignfull ';
 
                     <?php $image = get_sub_field( 'image' ); ?>
                     <?php if ( $image ) : ?>
-                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-                    <?php endif; ?>
+                        <figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['large-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['large-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>"  /></figure>
+                        <?php endif; ?>
                     </li>
                 <?php endwhile; ?>
                 </ul>

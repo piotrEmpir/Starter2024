@@ -40,7 +40,7 @@ if ( ! empty( $block['align'] ) ) {
                 <div class="card">
                         <?php $image = get_sub_field( 'image' ); ?>
                         <?php if ( $image ) : ?>
-                            <div class="thumb"><img src="<?php echo esc_url( $image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" /></div>
+                            <div class="thumb"><img src="<?php echo esc_url( $image['sizes']['image-tablet'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['image-tablet-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['image-tablet-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>"  /></div>
                         <?php endif; ?>
                         <div class="info">
                             <?php if ( $name = get_sub_field( 'name' ) ) : ?>

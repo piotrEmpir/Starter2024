@@ -36,4 +36,10 @@
             flex-flow: column;
         }
     }
+
+    @include media-breakpoint-down(sm){
+        .wrap.grid{
+            grid-template-columns: 1fr;
+        }
+    }
 }

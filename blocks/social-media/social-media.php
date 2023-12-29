@@ -36,15 +36,19 @@ if ( ! empty( $block['align'] ) ) {
 	<?php if ( have_rows( 'social_media' ) ) : ?>
 		<?php while ( have_rows( 'social_media' ) ) : the_row(); ?>
 			<?php $icon = get_sub_field( 'icon' ); ?>
+			<?php $link = get_sub_field( 'link' ); ?>
+
+			<?php if ( $link ) : ?>
+				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
+			<?php endif; ?>
 			<?php if ( $icon ) : ?>
 				<img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" />
 			<?php endif; ?>
-			<?php $link = get_sub_field( 'link' ); ?>
 			<?php if ( $link ) : ?>
-				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+				</a>
 			<?php endif; ?>
 		<?php endwhile; ?>
 	<?php else : ?>
-		<?php // No rows found ?>
+		<?php if(is_admin()) echo '<p>Please go to edit mode to add content</p>'; ?>
 	<?php endif; ?>
 </div>

@@ -2,7 +2,7 @@
     <?php
     if(has_post_thumbnail()){ ?>
         <figure class="thumbnail">
-            <a href=""><?php the_post_thumbnail(); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('image-phone'); ?></a>
         </figure>
     <?php } ?>
     <h3>

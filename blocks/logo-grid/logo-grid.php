@@ -37,7 +37,7 @@ if ( ! empty( $block['align'] ) ) {
 		<?php while ( have_rows( 'logos' ) ) : the_row(); ?>
 			<?php $image = get_sub_field( 'image' ); ?>
 			<?php if ( $image ) : ?>
-				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+				<figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['medium-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['medium-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>"  /></figure>
 			<?php endif; ?>
 			<?php $link = get_sub_field( 'link' ); ?>
 			<?php if ( $link ) : ?>

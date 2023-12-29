@@ -37,13 +37,13 @@ if ( ! empty( $block['align'] ) ) {
 		<?php while ( have_rows( 'employees' ) ) : the_row(); ?>
 			<?php $image = get_sub_field( 'image' ); ?>
 			<?php if ( $image ) : ?>
-				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-			<?php endif; ?>
-			<?php the_sub_field( 'name' ); ?>
-			<?php the_sub_field( 'phone' ); ?>
-			<?php the_sub_field( 'email' ); ?>
+                <figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['large-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['large-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>"  /></figure>
+            <?php endif; ?>
+			<h4><?php the_sub_field( 'name' ); ?></h4>
+			<p class="phone"><?php the_sub_field( 'phone' ); ?></p>
+			<p class="email"><?php the_sub_field( 'email' ); ?></p>
 		<?php endwhile; ?>
 	<?php else : ?>
-		<?php // No rows found ?>
+		<?php if(is_admin()) echo '<p>Please go to edit mode to add content</p>'; ?>s
 	<?php endif; ?>
 </div>

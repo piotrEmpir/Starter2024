@@ -32,8 +32,7 @@ if ( ! empty( $block['align'] ) ) {
 		<div class="image">
 			<?php $image = get_field( 'image' ); ?>
 			<?php if ( $image ) : ?>
-				<img srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'full' ); ?>" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-
+				<figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['image-tablet'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['image-tablet-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['image-tablet-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>"  /></figure>
 			<?php endif; ?>
 		</div>
 

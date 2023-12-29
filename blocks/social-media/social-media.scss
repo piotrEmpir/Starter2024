@@ -1,7 +1,12 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-social-media {
-}
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
+    img{
+        max-width: 50px;
+    }
+}
