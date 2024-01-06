@@ -15,12 +15,12 @@
         margin: 1em 0 !important;
     }
 
-    .has-spinner + .wpcf7-spinner{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin: 0;
-    }
+    // .has-spinner + .wpcf7-spinner{
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: 0;
+    //     margin: 0;
+    // }
 
     .row{
         @include media-breakpoint-up(md){
@@ -46,9 +46,15 @@
 
     .wpcf7-list-item{
         margin-left: 0;
-        margin-bottom: 30px;
+        display: block;
+
+        &+.wpcf7-list-item{
+            margin-top: 15px;
+        }
+
         label{
             position: relative;
+            cursor: pointer;
             input{
                 position: absolute;
                 top: 0;
@@ -64,7 +70,7 @@
                     height: 20px;
                     border: 1px solid #000;
                     left: 0;
-                    top: 0;
+                    top: 3px;
                 }
                 &:before{
                     position: absolute;
@@ -73,7 +79,7 @@
                     height: 5px;
                     border: 3px solid #000;
                     border-width: 0 0 3px 3px;
-                    top: 6px;
+                    top: 9px;
                     left: 5px;
                     transform: rotate(-45deg);
                     opacity: 0;
@@ -81,6 +87,7 @@
             }
             input:checked + span:before{
                 opacity: 1;
+                border-color: var(--wp--preset--color--primary);
             }
         }
     }
