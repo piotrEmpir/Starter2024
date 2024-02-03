@@ -1,0 +1,245 @@
+{
+    "key": "group_65af5e6ae0659",
+    "title": "Heritage",
+    "fields": [
+        {
+            "key": "field_65af5e6bebf32",
+            "label": "Parent",
+            "name": "parent",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65af5e83ebf33",
+            "label": "Gen1",
+            "name": "children",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_65af5e9406936": {
+                    "key": "layout_65af5e9406936",
+                    "name": "children_gen1",
+                    "label": "Children gen1",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65af5ea2ebf34",
+                            "label": "Name",
+                            "name": "name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65af5ec6ebf35",
+                            "label": "Gen 2",
+                            "name": "gen_2",
+                            "aria-label": "",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_65af5eca9ea40": {
+                                    "key": "layout_65af5eca9ea40",
+                                    "name": "children_gen2",
+                                    "label": "Children gen2",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_65af5eebebf36",
+                                            "label": "Name",
+                                            "name": "name",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_65af5ef4ebf37",
+                                            "label": "Gen3",
+                                            "name": "gen3",
+                                            "aria-label": "",
+                                            "type": "flexible_content",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layouts": {
+                                                "layout_65af5ef942703": {
+                                                    "key": "layout_65af5ef942703",
+                                                    "name": "children_gen3",
+                                                    "label": "Children gen3",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_65af5f1bebf38",
+                                                            "label": "Name",
+                                                            "name": "name",
+                                                            "aria-label": "",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "maxlength": "",
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": ""
+                                                        },
+                                                        {
+                                                            "key": "field_65af5f25ebf39",
+                                                            "label": "Gen4",
+                                                            "name": "gen4",
+                                                            "aria-label": "",
+                                                            "type": "flexible_content",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "layouts": {
+                                                                "layout_65af5f29451ef": {
+                                                                    "key": "layout_65af5f29451ef",
+                                                                    "name": "children_gen4",
+                                                                    "label": "Children gen4",
+                                                                    "display": "block",
+                                                                    "sub_fields": [
+                                                                        {
+                                                                            "key": "field_65af5f32ebf3a",
+                                                                            "label": "Name",
+                                                                            "name": "name",
+                                                                            "aria-label": "",
+                                                                            "type": "text",
+                                                                            "instructions": "",
+                                                                            "required": 0,
+                                                                            "conditional_logic": 0,
+                                                                            "wrapper": {
+                                                                                "width": "",
+                                                                                "class": "",
+                                                                                "id": ""
+                                                                            },
+                                                                            "default_value": "",
+                                                                            "maxlength": "",
+                                                                            "placeholder": "",
+                                                                            "prepend": "",
+                                                                            "append": ""
+                                                                        }
+                                                                    ],
+                                                                    "min": "",
+                                                                    "max": ""
+                                                                }
+                                                            },
+                                                            "min": "",
+                                                            "max": "",
+                                                            "button_label": "Add Row"
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": ""
+                                                }
+                                            },
+                                            "min": "",
+                                            "max": "",
+                                            "button_label": "Add Row"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Row"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1705991996
+}
