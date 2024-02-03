@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/6.3.2" created="2023-10-30 20:11" -->
+	<!-- generator="WordPress/6.3.3" created="2024-02-03 16:24" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Wordpress</title>
 	<link>http://localhost/wordpress</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Mon, 30 Oct 2023 20:11:11 +0000</pubDate>
+	<pubDate>Sat, 03 Feb 2024 16:24:40 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://localhost/wordpress/</wp:base_site_url>
@@ -38,7 +38,7 @@
 		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[Piotr]]></wp:author_login><wp:author_email><![CDATA[piotr.empire@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[Piotr]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 				
-	<generator>https://wordpress.org/?v=6.3.2</generator>
+	<generator>https://wordpress.org/?v=6.3.3</generator>
 
 		<item>
 		<title><![CDATA[Sample Page]]></title>
@@ -369,6 +369,58 @@
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[articles]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														</item>
+					<item>
+		<title><![CDATA[Features-grid]]></title>
+		<link>http://localhost/wordpress/features-grid/</link>
+		<pubDate>Sat, 03 Feb 2024 15:43:20 +0000</pubDate>
+		<dc:creator><![CDATA[Piotr]]></dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?page_id=294</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:acf/features-grid {"name":"acf/features-grid","data":{"title":"title","_title":"field_65be5e85d351e","features_0_image":179,"_features_0_image":"field_65be5ebfd3520","features_0_title":"Lorem Ipsum is simply ","_features_0_title":"field_65be5ed9d3521","features_0_description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \r\nLortem Ipsum has been the industry's standard dummy text ever since the \r\n1500s, when an unknown printer took a galley of type and scrambled it to ","_features_0_description":"field_65be5ee0d3522","features_1_image":177,"_features_1_image":"field_65be5ebfd3520","features_1_title":"make a type specimen","_features_1_title":"field_65be5ed9d3521","features_1_description":"make a type specimen book. It has survived not only five centuries, but \r\nalso the leap into electronic typesetting, remaining essentially unchanged. \r\nIt was popularised in the 1960s with the release of Letraset sheets containing \r\nLorem Ipsum passages, ","_features_1_description":"field_65be5ee0d3522","features_2_image":178,"_features_2_image":"field_65be5ebfd3520","features_2_title":"and more recently","_features_2_title":"field_65be5ed9d3521","features_2_description":"and more recently with desktop publishing software \r\nlike Aldus PageMaker including versions of Lorem Ipsum.ma","_features_2_description":"field_65be5ee0d3522","features_3_image":176,"_features_3_image":"field_65be5ebfd3520","features_3_title":"make a type","_features_3_title":"field_65be5ed9d3521","features_3_description":"make a type specimen book. It has survived not only five centuries, but \r\nalso the leap into electronic typesetting, remaining essentially unchanged. \r\nIt was popularised in the 196","_features_3_description":"field_65be5ee0d3522","features_4_image":165,"_features_4_image":"field_65be5ebfd3520","features_4_title":"ke a type specimen","_features_4_title":"field_65be5ed9d3521","features_4_description":"ke a type specimen book. It has survived not only five centuries, but \r\nalso the leap into electronic typesetting, remaining essentially unchanged. \r\nIt was popularised in the 196","_features_4_description":"field_65be5ee0d3522","features_5_image":163,"_features_5_image":"field_65be5ebfd3520","features_5_title":"Lorem Ipsum is ","_features_5_title":"field_65be5ed9d3521","features_5_description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \r\nLortem Ipsum has been the industry's standard dummy text ever since the ","_features_5_description":"field_65be5ee0d3522","features_6_image":161,"_features_6_image":"field_65be5ebfd3520","features_6_title":"Lorem Ipsum ","_features_6_title":"field_65be5ed9d3521","features_6_description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \r\nLortem Ipsum has been the industry's standard dummy text ever since the ","_features_6_description":"field_65be5ee0d3522","features":7,"_features":"field_65be5e99d351f"},"mode":"edit","alignText":"left","alignContent":"top"} /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>294</wp:post_id>
+		<wp:post_date><![CDATA[2024-02-03 15:43:20]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2024-02-03 15:43:20]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2024-02-03 15:47:45]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2024-02-03 15:47:45]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[features-grid]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														<wp:postmeta>
+		<wp:meta_key><![CDATA[footnotes]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Steps]]></title>
+		<link>http://localhost/wordpress/steps/</link>
+		<pubDate>Sat, 03 Feb 2024 15:58:05 +0000</pubDate>
+		<dc:creator><![CDATA[Piotr]]></dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?page_id=307</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:acf/steps {"name":"acf/steps","data":{"title":"steps title","_title":"field_65be61848f6ee","steps_0_number":"1.","_steps_0_number":"field_65be61a88f6f0","steps_0_title":"step title 1","_steps_0_title":"field_65be61b08f6f1","steps_0_image":179,"_steps_0_image":"field_65be61b98f6f2","steps_0_description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \r\nLortem Ipsum has been the industry's standard dummy text ever since the ","_steps_0_description":"field_65be61ca8f6f3","steps_1_number":"2.","_steps_1_number":"field_65be61a88f6f0","steps_1_title":"step title 2","_steps_1_title":"field_65be61b08f6f1","steps_1_image":177,"_steps_1_image":"field_65be61b98f6f2","steps_1_description":"1500s, when an unknown printer took a galley of type and scrambled it to \r\nmake a type specimen book. It has survived not only five centuries, but ","_steps_1_description":"field_65be61ca8f6f3","steps_2_number":"3.","_steps_2_number":"field_65be61a88f6f0","steps_2_title":"step title 3","_steps_2_title":"field_65be61b08f6f1","steps_2_image":178,"_steps_2_image":"field_65be61b98f6f2","steps_2_description":"also the leap into electronic typesetting, remaining essentially unchanged. \r\nIt was popularised in the 1960s with the release of Letraset sheets containing ","_steps_2_description":"field_65be61ca8f6f3","steps_3_number":"4.","_steps_3_number":"field_65be61a88f6f0","steps_3_title":"step title 4","_steps_3_title":"field_65be61b08f6f1","steps_3_image":165,"_steps_3_image":"field_65be61b98f6f2","steps_3_description":"Lorem Ipsum passages, and more recently with desktop publishing software \r\nlike Aldus PageMaker including versions of Lorem Ipsum.","_steps_3_description":"field_65be61ca8f6f3","steps_4_number":"5.","_steps_4_number":"field_65be61a88f6f0","steps_4_title":"step title 5","_steps_4_title":"field_65be61b08f6f1","steps_4_image":163,"_steps_4_image":"field_65be61b98f6f2","steps_4_description":"Lorem Ipsum passages, and more recently with desktop publishing software \r\nlike Aldus PageMaker including versions of Lorem Ipsum.","_steps_4_description":"field_65be61ca8f6f3","steps":5,"_steps":"field_65be619b8f6ef","link":{"title":"Default","url":"http://localhost/wordpress/default/","target":""},"_link":"field_65be62f74a372"},"mode":"edit","alignText":"left","alignContent":"top"} /-->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>307</wp:post_id>
+		<wp:post_date><![CDATA[2024-02-03 15:58:05]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2024-02-03 15:58:05]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2024-02-03 16:00:46]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2024-02-03 16:00:46]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[steps]]></wp:post_name>
 		<wp:status><![CDATA[publish]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>

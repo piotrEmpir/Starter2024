@@ -8,7 +8,6 @@ $scssFilePath = Join-Path -Path $folderPath -ChildPath "$folderName.scss"
 New-Item -ItemType File -Path $scssFilePath
 Add-Content -Path $scssFilePath -Value "@import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-$folderName {
 }

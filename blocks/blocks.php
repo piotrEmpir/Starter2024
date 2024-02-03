@@ -7,6 +7,10 @@ function register_acf_blocks(){
 
 
 
+register_block_type( __DIR__ . '/article-grid-filter' ); 
+register_block_type( __DIR__ . '/count-up' ); 
+register_block_type( __DIR__ . '/steps' ); 
+register_block_type( __DIR__ . '/features-grid' ); 
 register_block_type( __DIR__ . '/locations' ); 
 register_block_type( __DIR__ . '/contact-card' ); 
 register_block_type( __DIR__ . '/intro-image' ); 

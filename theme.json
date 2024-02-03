@@ -190,7 +190,6 @@
 				"typography": {
 					"fontWeight": "700",
 					"fontSize": "var(--wp--preset--font-size--xxl)",
-					"textTransform": "uppercase",
 					"lineHeight": "1"
 				},
 				"spacing": {
