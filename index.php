@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-aa
+
 	<div class="is-layout-constrained">
 
 		<div class="block-article-grid alignwide">
