@@ -40,7 +40,7 @@ if ( ! empty( $block['align'] ) ) {
                 <div class="item">
                     <?php $image = get_sub_field( 'image' ); ?>
                     <?php if ( $image ) : ?>
-                        <img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"  />
+                        <img src="<?php echo esc_url( $image['sizes']['image-tablet'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['image-tablet-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['image-tablet-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>" loading="lazy" />
                     <?php endif; ?>
                     <h3><?php the_sub_field( 'title' ); ?></h3>
                     <div class="desc"><?php the_sub_field( 'description' ); ?></div>

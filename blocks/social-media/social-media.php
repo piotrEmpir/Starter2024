@@ -42,7 +42,7 @@ if ( ! empty( $block['align'] ) ) {
 				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
 			<?php endif; ?>
 			<?php if ( $icon ) : ?>
-				<img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" />
+				<img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" loading="lazy" />
 			<?php endif; ?>
 			<?php if ( $link ) : ?>
 				</a>
