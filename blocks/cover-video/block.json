@@ -1,0 +1,16 @@
+
+{
+    "name": "acf/cover-video",
+    "title": "cover-video",
+    "description": "",
+    "style": [ "file:./cover-video.css" ],
+    "category": "layout",
+    "icon": "block-default",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cover-video.php"
+    },
+    "supports": {
+        "align": true
+    }
+}
