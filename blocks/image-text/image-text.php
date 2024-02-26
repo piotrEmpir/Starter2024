@@ -11,7 +11,7 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'image-text-' . $block['id'];
+$id = 'image-text-' . $block['id'].rand(0,9999);
 if ( ! empty($block['anchor'] ) ) {
     $id = $block['anchor'];
 }
@@ -24,7 +24,7 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
-	$attrs = $is_preview ? ' class="'.esc_attr( $classes ).'" ' : get_block_wrapper_attributes([ 'class' => $classes]); ?>
+$attrs = $is_preview ? ' class="'.esc_attr( $classes ).'" ' : get_block_wrapper_attributes([ 'class' => $classes]); ?>
 
 <div id="<?php echo esc_attr( $id ); ?>" <?php echo $attrs; ?>  >
 	<div class="wrap <?php the_field( 'order' ); ?> <?php the_field( 'style' ); ?>">

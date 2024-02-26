@@ -11,7 +11,7 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'logo-grid-' . $block['id'];
+$id = 'logo-grid-' . $block['id'].rand(0,9999);;
 if ( ! empty($block['anchor'] ) ) {
     $id = $block['anchor'];
 }
@@ -26,11 +26,6 @@ if ( ! empty( $block['align'] ) ) {
 }
 ?>
 
-<style type="text/css">
-	<?php echo '#' . $id; ?> {
-		/* Add styles that use ACF values here */
-	}
-</style>
 
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 	<?php if ( have_rows( 'logos' ) ) : ?>

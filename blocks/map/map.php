@@ -12,7 +12,7 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'map-' . $block['id'];
+$id = 'map-' . $block['id'].rand(0,9999);;
 if ( ! empty($block['anchor'] ) ) {
     $id = $block['anchor'];
 }

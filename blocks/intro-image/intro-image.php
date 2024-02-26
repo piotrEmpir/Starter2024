@@ -11,7 +11,7 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'intro-image-' . $block['id'];
+$id = 'intro-image-' . $block['id'].rand(0,9999);;
 if ( ! empty($block['anchor'] ) ) {
     $id = $block['anchor'];
 }
