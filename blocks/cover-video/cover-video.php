@@ -44,7 +44,21 @@ if ( ! empty( $block['align'] ) ) {
     <div class="video_wrap">
         <div class="video-container">
             <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/eXKWDgj-00?controls=0M&autoplay=1&mute=1&playsinline=1&loop=1"></iframe> -->
-                <iframe src="https://www.youtube.com/embed/vY0ecqqhbXE?controls=0&autoplay=1&mute=1&playsinline=1&playlist=vY0ecqqhbXE&loop=1&start=95&showinfo=0&modestbranding=1&rel=0" frameborder="0"></iframe>
+            <?php
+                $url =  get_field( 'video' );
+                $query_string = parse_url($url, PHP_URL_QUERY);
+                parse_str($query_string, $params);
+                $videoId = $params['v'];
+            ?>
+
+            <iframe src="https://www.youtube.com/embed/<?php echo $videoId; ?>?controls=0&autoplay=1&mute=1&playsinline=1&playlist=<?php echo $videoId; ?>&loop=1&start=95&showinfo=0&modestbranding=1&rel=0" frameborder="0"></iframe>
+
+
+            <?php /*
+            <div class="video-container">
+                <div class="off-paralax-background"><iframe src="https://www.youtube.com/embed/<?php echo $videoId; ?>?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=<?php echo $videoId; ?>" frameborder="0" allowfullscreen></iframe></div>
+            </div>
+            */ ?>
         </div>
     </div>
 </div>

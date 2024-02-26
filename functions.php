@@ -33,7 +33,7 @@ add_theme_support(
 add_theme_support( 'wp-block-styles' );
 add_theme_support( 'align-wide' );
 add_theme_support( 'responsive-embeds' );
-
+add_post_type_support( 'page', 'excerpt' );
 
 register_nav_menus( array(
     'primary'   => __( 'Primary Menu', 'wbdvpl' )

@@ -7,8 +7,8 @@
             "label": "Video",
             "name": "video",
             "aria-label": "",
-            "type": "file",
-            "instructions": "",
+            "type": "text",
+            "instructions": "Link format https:\/\/www.youtube.com\/<strong>watch?v=vY0ecqqhbXE<\/strong>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,11 +16,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1671703154
+    "modified": 1708936092
 }
