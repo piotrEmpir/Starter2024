@@ -17,7 +17,7 @@ if ( ! empty($block['anchor'] ) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$classes = 'block-article-grid-filter';
+$classes = 'block-article-grid-filter block-article-grid';
 if ( ! empty( $block['className'] ) ) {
     $classes .= ' ' . $block['className'];
 }

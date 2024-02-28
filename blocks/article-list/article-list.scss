@@ -1,7 +1,25 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-article-list {
-}
 
+    .article-list-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: var(--wp--style--block-gap);
+        margin-bottom: var(--wp--style--block-gap);
+
+        h3{
+            margin-top: 0;
+        }
+
+
+        .wp-block-buttons.is-content-justification-center{
+            justify-content: flex-start;
+
+            .wp-element-button, .wp-block-button__link{
+                margin-top: 1em;
+            }
+        }
+    }
+}

@@ -5,12 +5,20 @@
     .wrap{
         display: flex;
     }
+
     .image{
         flex: 0 0 50%;
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
+        }
+        figure{
+            display: block;
+            margin: 0;
+            width: 100%;
+            height: 100%;
         }
     }
     .text{
@@ -26,6 +34,39 @@
     &.alignfull .text{
         padding-left: var(--wp--style--block-gap);
         padding-right: var(--wp--style--block-gap);
+    }
+
+
+    &:has(.wrap.style2){
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            top: var(--wp--style--block-gap);
+            bottom: var(--wp--style--block-gap);
+            left: 50%;
+            width: var(--wp--style--block-gap);
+            z-index: 99;
+            background: inherit;
+        }
+        .text{
+            border-top: var(--wp--style--block-gap) solid #fff;
+            border-bottom: var(--wp--style--block-gap) solid #fff;
+        }
+
+        &:has(.image-text){
+            .text{
+                padding-left: 0;
+            }
+            &:after{
+                transform: translateX(-100%);
+            }
+        }
+        &:has(.text-image){
+            .text{
+                padding-right: 0;
+            }
+        }
     }
 
     @include media-breakpoint-up(md){

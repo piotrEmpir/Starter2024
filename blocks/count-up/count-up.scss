@@ -2,5 +2,12 @@
 @import '../../scss/mixins';
 
 .block-count-up {
-}
 
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        gap: var(--wp--style--block-gap);
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}

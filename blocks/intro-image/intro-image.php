@@ -40,7 +40,12 @@ $classes .= ' alignfull ';
                         <h2><?php the_sub_field( 'title' ); ?></h2>
                         <?php $link = get_sub_field( 'link' ); ?>
                         <?php if ( $link ) : ?>
-                            <a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+                            <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-layout-2 wp-block-buttons-is-layout-flex">
+                                <div class="wp-block-button">
+                                    <a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $link['url'] ); ?>"
+                                target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+                                </div>
+                            </div>
                         <?php endif; ?>
                     </div>
 

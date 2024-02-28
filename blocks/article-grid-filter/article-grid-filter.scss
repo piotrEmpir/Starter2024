@@ -2,5 +2,18 @@
 @import '../../scss/mixins';
 
 .block-article-grid-filter {
-}
 
+    .filters{
+
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        select{
+            max-width: 200px;
+        }
+    }
+}

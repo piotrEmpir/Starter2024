@@ -1,1 +1,2 @@
-
+.block-employees .wrap{display:-ms-grid;display:grid;-ms-grid-columns:1fr var(--wp--style--block-gap) 1fr var(--wp--style--block-gap) 1fr;grid-template-columns:1fr 1fr 1fr;gap:var(--wp--style--block-gap)}@media (max-width:989.98px){.block-employees .wrap{-ms-grid-columns:1fr 1fr;grid-template-columns:1fr 1fr}}@media (max-width:599.98px){.block-employees .wrap{-ms-grid-columns:1fr;grid-template-columns:1fr}}
+/*# sourceMappingURL=employees.css.map */

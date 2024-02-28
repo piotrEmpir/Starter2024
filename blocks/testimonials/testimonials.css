@@ -1,1 +1,2 @@
-
+.block-testimonials{position:relative;margin-bottom:var(--var-block-spacing)}.block-testimonials .text{font-style:italic}.block-testimonials .text p:first-child:before{content:'"'}.block-testimonials .text p:last-child:after{content:'"'}.block-testimonials .who{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:var(--wp--style--block-gap)}.block-testimonials .image_wrap{overflow:hidden;max-width:75px;border-radius:50%}.block-testimonials .image_wrap figure,.block-testimonials .image_wrap img{width:100%;margin:0;display:block}
+/*# sourceMappingURL=testimonials.css.map */

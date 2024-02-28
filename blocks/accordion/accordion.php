@@ -32,5 +32,5 @@ if ( ! empty( $block['align'] ) ) {
 		<?php the_field( 'title' ); ?>
 		<span class="toggler"></span>
 	</div>
-	<div class="ac-content"><?php the_field( 'description' ); ?></div>
+	<div class="ac-content" style="display: none;"><?php the_field( 'description' ); ?></div>
 </div>

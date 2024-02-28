@@ -1,7 +1,17 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-employees {
-}
+    .wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--wp--style--block-gap);
 
+        @include media-breakpoint-down(md){
+            grid-template-columns: 1fr 1fr;
+        }
+        @include media-breakpoint-down(xs){
+            grid-template-columns: 1fr;
+        }
+    }
+}

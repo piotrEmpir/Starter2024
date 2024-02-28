@@ -4,8 +4,11 @@
 .block-intro-image {
     position: relative;
 
-    img{
+    img, figure{
         width: 100%;
+        display: block;
+        margin: 0;
+
     }
 
     .video-container {
@@ -30,13 +33,6 @@
         bottom: 70px;
         z-index: 99;
         text-align: center;
-
-        a{
-            color: #fff;
-            border: 2px solid #fff;
-            padding: 30px;
-            display: inline-block;
-        }
     }
 
     .splide__pagination{

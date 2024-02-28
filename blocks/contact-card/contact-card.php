@@ -42,13 +42,13 @@ if ( ! empty( $block['align'] ) ) {
                                 <h3><?php echo esc_html( $name ); ?></h3>
                             <?php endif; ?>
                             <?php if ( $position = get_sub_field( 'position' ) ) : ?>
-                                <div class="pos"><?php echo esc_html( $position ); ?></div>
+                                <p class="pos"><?php echo esc_html( $position ); ?></p>
                             <?php endif; ?>
                             <?php if ( $phone = get_sub_field( 'phone' ) ) : ?>
-                                <a href="tel:<?php the_sub_field( 'phone' ); ?>"><?php the_sub_field( 'phone' ); ?></a>
+                                <p><a href="tel:<?php the_sub_field( 'phone' ); ?>"><?php the_sub_field( 'phone' ); ?></a></p>
                             <?php endif; ?>
                             <?php if ( $email = get_sub_field( 'email' ) ) : ?>
-                                <a href="tel:<?php the_sub_field( 'email' ); ?>"><?php the_sub_field( 'email' ); ?></a>
+                                <p><a href="tel:<?php the_sub_field( 'email' ); ?>"><?php the_sub_field( 'email' ); ?></a></p>
                             <?php endif; ?>
 
                         </div>

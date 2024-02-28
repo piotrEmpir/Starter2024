@@ -29,15 +29,19 @@ if ( ! empty( $block['align'] ) ) {
 
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 	<?php if ( have_rows( 'employees' ) ) : ?>
-		<?php while ( have_rows( 'employees' ) ) : the_row(); ?>
-			<?php $image = get_sub_field( 'image' ); ?>
-			<?php if ( $image ) : ?>
-                <figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['large-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['large-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>" loading="lazy" /></figure>
-            <?php endif; ?>
-			<h4><?php the_sub_field( 'name' ); ?></h4>
-			<p class="phone"><?php the_sub_field( 'phone' ); ?></p>
-			<p class="email"><?php the_sub_field( 'email' ); ?></p>
-		<?php endwhile; ?>
+		<div class="wrap">
+			<?php while ( have_rows( 'employees' ) ) : the_row(); ?>
+				<div class="item">
+					<?php $image = get_sub_field( 'image' ); ?>
+					<?php if ( $image ) : ?>
+								<figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['large'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['large-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['large-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>" loading="lazy" /></figure>
+							<?php endif; ?>
+					<h4><?php the_sub_field( 'name' ); ?></h4>
+					<p class="phone"><a href="tel:<?php the_sub_field( 'phone' ); ?>"><?php the_sub_field( 'phone' ); ?></a></p>
+					<p class="email"><a href="mailto:<?php the_sub_field( 'email' ); ?>"><?php the_sub_field( 'email' ); ?></a></p>
+				</div>
+			<?php endwhile; ?>
+		</div>
 	<?php else : ?>
 		<?php if(is_admin()) echo '<p>Please go to edit mode to add content</p>'; ?>s
 	<?php endif; ?>

@@ -33,8 +33,8 @@ if ( ! empty( $block['align'] ) ) {
 		<div class="wrap">
             <?php while ( have_rows( 'items' ) ) : the_row(); ?>
                 <div class="item">
-                    <?php the_sub_field( 'number' ); ?>
-                    <h3><?php the_sub_field( 'title' ); ?></h3>
+                    <div class="number has-xl-font-size"><?php the_sub_field( 'number' ); ?></div>
+                    <h3 class="has-md-font-size"><?php the_sub_field( 'title' ); ?></h3>
                     <?php the_sub_field( 'description' ); ?>
                 </div>
             <?php endwhile; ?>

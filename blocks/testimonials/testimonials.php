@@ -11,10 +11,12 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'testimonials-' . $block['id'].rand(0,9999);;
+$id = 'testimonials-' . $block['id'];
 if ( ! empty($block['anchor'] ) ) {
     $id = $block['anchor'];
 }
+
+$rand_num = rand(0,1000);
 
 // Create class attribute allowing for custom "className" and "align" values.
 $classes = 'block-testimonials';
@@ -26,18 +28,59 @@ if ( ! empty( $block['align'] ) ) {
 }
 ?>
 
+<style type="text/css">
+	<?php echo '#' . $id; ?> {
+		/* Add styles that use ACF values here */
+	}
+</style>
 
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 	<?php if ( have_rows( 'testimonials' ) ) : ?>
-		<?php while ( have_rows( 'testimonials' ) ) : the_row(); ?>
-			<?php the_sub_field( 'description' ); ?>
-			<?php the_sub_field( 'who' ); ?>
-			<?php $image = get_sub_field( 'image' ); ?>
-			<?php if ( $image ) : ?>
-				<figure class="thumb"><img src="<?php echo esc_url( $image['sizes']['medium'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" width="<?php echo esc_html( $image['sizes']['medium-width'] ); ?>" height="<?php echo esc_html( $image['sizes']['medium-height'] ); ?>" srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'large' ); ?>" loading="lazy"  /></figure>
-			<?php endif; ?>
-		<?php endwhile; ?>
+		<div id="testimonials_slider<?=$rand_num;?>" class="splide" aria-label="Testimonials slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+				<?php while ( have_rows( 'testimonials' ) ) : the_row(); ?>
+					<li class="splide__slide">
+						<div class="item">
+							<div class="text has-sm-font-size">
+								<?php the_sub_field( 'description' ); ?>
+							</div>
+
+							<div class="who">
+								<?php $image = get_sub_field( 'image' ); ?>
+								<?php if ( $image ) : ?>
+									<?php $image = get_sub_field( 'image' ); ?>
+									<?php if ( $image ) : ?>
+										<div class="image_wrap">
+											<img srcset="<?php echo wp_get_attachment_image_srcset( $image['ID'], 'thumbnail' ); ?>"  src="<?php echo esc_url( $image['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"  loading="lazy"  width="<?php echo  $image['sizes']['thumbnail-width']; ?>" height="<?php echo $image['sizes']['thumbnail-height']; ?>" />
+										</div>
+									<?php endif; ?>
+								<?php endif; ?>
+
+								<span class="name"><?php the_sub_field( 'who' ); ?></span>
+							</div>
+						</div>
+					</li>
+				<?php endwhile; ?>
+				</ul>
+			</div>
+		</div>
 	<?php else : ?>
 		<?php if(is_admin()) echo '<p>Please go to edit mode to add content</p>'; ?>
 	<?php endif; ?>
 </div>
+
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '#testimonials_slider<?=$rand_num;?>',{
+        arrows: true,
+        pagination: true,
+        perPage: 1,
+        gap: 20,
+        width: '100%',
+
+    } );
+    splide.mount();
+  } );
+</script>

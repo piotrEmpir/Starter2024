@@ -6,6 +6,7 @@
         position: relative;
         padding-right: 1em;
         cursor: pointer;
+        @include trans;
 
         .toggler{
             position: absolute;
@@ -14,6 +15,7 @@
             transform: translateY(-50%);
             width: 1em;
             height: 1em;
+            @include trans;
 
             &:after,
             &:before{
@@ -24,10 +26,23 @@
                 left: 0px;
                 right: 0px;
                 background: var(--wp--preset--color--primary);
+                @include trans;
             }
             &:before{
                 transform: rotate(90deg);
                 transform-origin: center;
+            }
+        }
+
+        &:hover,
+        &:focus{
+            color: var(--wp--preset--color--primary);
+        }
+        &.active{
+            .toggler{
+                &:before{
+                    transform: rotate(90deg) scale(0);
+                }
             }
         }
     }

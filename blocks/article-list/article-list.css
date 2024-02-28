@@ -1,1 +1,2 @@
-
+.block-article-list .article-list-item{display:-ms-grid;display:grid;-ms-grid-columns:1fr var(--wp--style--block-gap) 2fr;grid-template-columns:1fr 2fr;gap:var(--wp--style--block-gap);margin-bottom:var(--wp--style--block-gap)}.block-article-list .article-list-item h3{margin-top:0}.block-article-list .article-list-item .wp-block-buttons.is-content-justification-center{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.block-article-list .article-list-item .wp-block-buttons.is-content-justification-center .wp-block-button__link,.block-article-list .article-list-item .wp-block-buttons.is-content-justification-center .wp-element-button{margin-top:1em}
+/*# sourceMappingURL=article-list.css.map */

@@ -1,7 +1,36 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/mixins/breakpoints';
 
 .block-testimonials {
-}
+    position: relative;
+    margin-bottom: var(--var-block-spacing);
 
+
+    .text{
+        font-style: italic;
+        p:first-child::before{
+            content: '"';
+        }
+        p:last-child::after{
+            content: '"';
+        }
+    }
+
+    .who{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--wp--style--block-gap);
+    }
+
+    .image_wrap{
+        overflow: hidden;
+        max-width: 75px;
+        border-radius: 50%;
+        img, figure{
+            width: 100%;
+            margin: 0;
+            display: block;
+        }
+    }
+}
