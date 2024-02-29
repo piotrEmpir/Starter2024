@@ -38,7 +38,7 @@ if ( ! empty( $block['align'] ) ) {
             ) );
 
             echo '<select name="anlass" id="anlass" class="anlass">';
-            echo '<option value="">Anlass</option>';
+            echo '<option value="0">Anlass</option>';
             foreach ($anlass as $anlass) {
                 echo '<option value="'.$anlass->slug.'">'.$anlass->name.'</option>';
             }
@@ -51,7 +51,7 @@ if ( ! empty( $block['align'] ) ) {
             ) );
 
             echo '<select name="musikstills" id="musikstills" class="musikstills">';
-            echo '<option value="">Musikstil</option>';
+            echo '<option value="0">Musikstil</option>';
             foreach ($musikstills as $musikstills) {
                 echo '<option value="'.$musikstills->slug.'">'.$musikstills->name.'</option>';
             }
@@ -64,7 +64,7 @@ if ( ! empty( $block['align'] ) ) {
             ) );
 
             echo '<select name="regions" id="regions" class="regions">';
-            echo '<option value="">Region</option>';
+            echo '<option value="0">Region</option>';
             foreach ($regions as $regions) {
                 echo '<option value="'.$regions->slug.'">'.$regions->name.'</option>';
             }
@@ -77,7 +77,7 @@ if ( ! empty( $block['align'] ) ) {
             ) );
 
             echo '<select name="skills" id="skills" class="skills">';
-            echo '<option value="">Skill</option>';
+            echo '<option value="0">Skill</option>';
             foreach ($skills as $skills) {
                 echo '<option value="'.$skills->slug.'">'.$skills->name.'</option>';
             }
@@ -91,7 +91,7 @@ if ( ! empty( $block['align'] ) ) {
                 $post_num = get_field( 'number_of_posts' );
                 $args = array(
                     'posts_per_page' => $post_num ,
-                    'post_type' => 'post'
+                    'post_type' => 'artist'
                 );
                 $query = new WP_Query( $args );
                 ?>
@@ -103,4 +103,72 @@ if ( ! empty( $block['align'] ) ) {
                 endif; ?>
     </div>
     <?php wp_reset_query(); ?>
+
+
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                // Function to handle the change event of the select dropdowns
+                function handleDropdownChange() {
+                    var anlass = $('#anlass').val();
+                    var musikstills = $('#musikstills').val();
+                    var regions = $('#regions').val();
+                    var skills = $('#skills').val();
+
+
+                     // /wp-json/custom/v1/endpoint/?anlass=some_anlass_value&musikstills=some_musikstills_value
+
+                    // Make an AJAX request to the WordPress REST API
+                    $.ajax({
+                        url: '<?php echo esc_url( rest_url( 'custom/v1/endpoint/' ) ); ?>',
+                        method: 'GET',
+                        data: {
+                            'anlass': anlass,
+                            'musikstills': musikstills,
+                            'regions': regions,
+                            'skills': skills
+                        },
+                        beforeSend: function(url, data) {
+                            // Show a loading spinner or any other UI indication
+                            // that the request is being processed
+                            $('.wrap').html('<div class="loading">Loading...</div>');
+
+                            console.log(url);
+                            console.log(data);
+                        },
+                        success: function(response) {
+                            // Handle the response and update the post listing
+
+                            console.log(response);
+
+                            var html = '';
+
+                            if (response.artists.length > 0) {
+
+                                $.each(response.artists, function(index, post) {
+
+
+
+                                    html += '<div class="post">';
+                                    html += '<h2>' + post.title + '</h2>';
+                                    html += '<a href="'+ post.title+'">more</a>';
+                                    html += '</div>';
+                                });
+                                $('.wrap').html(html);
+                            } else {
+                                $('.wrap').html('<div class="no-posts">No posts found.</div>');
+                            }
+                        },
+                        error: function() {
+                            // Handle the error case
+                            $('.wrap').html('<div class="error">Error occurred while fetching posts.</div>');
+                        }
+                    });
+                }
+
+                // Attach the change event handler to the select dropdowns
+                $('#anlass, #musikstills, #regions, #skills').on('change', handleDropdownChange);
+            });
+        })(jQuery);
+    </script>
 </div>

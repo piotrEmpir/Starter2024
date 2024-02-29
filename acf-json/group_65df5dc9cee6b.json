@@ -1,5 +1,5 @@
 {
-    "key": "group_65d893d48a448",
+    "key": "group_65df5dc9cee6b",
     "title": "Fitcalc",
     "fields": [
         {
@@ -2034,9 +2034,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/fitcalc"
+                "value": "post"
             }
         ]
     ],
@@ -2049,5 +2049,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709137196
+    "modified": 1709138260
 }
