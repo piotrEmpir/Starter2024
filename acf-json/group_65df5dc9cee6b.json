@@ -1154,9 +1154,9 @@
             "append": ""
         },
         {
-            "key": "field_65d899550c80d",
-            "label": "First name",
-            "name": "first_name",
+            "key": "field_65f1c69a1c35c",
+            "label": "Form shortcode",
+            "name": "form_shortcode",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1167,87 +1167,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "First name",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65d899610c80e",
-            "label": "Last name",
-            "name": "last_name",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Last name",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65d899970c810",
-            "label": "Terms",
-            "name": "terms",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Terms",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65d8996e0c80f",
-            "label": "Send results",
-            "name": "send_results",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Send results",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65d899bd0c811",
-            "label": "Thanks",
-            "name": "thanks",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Thanks",
+            "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -2034,9 +1954,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/fitcalc"
             }
         ]
     ],
@@ -2049,5 +1969,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709138260
+    "modified": 1710407790
 }

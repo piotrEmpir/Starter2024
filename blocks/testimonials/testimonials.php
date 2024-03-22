@@ -71,16 +71,19 @@ if ( ! empty( $block['align'] ) ) {
 </div>
 
 
+<?php if(!is_admin()) { ?>
 <script>
   document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '#testimonials_slider<?=$rand_num;?>',{
         arrows: true,
-        pagination: true,
+        pagination: false,
         perPage: 1,
         gap: 20,
+		loop: true,
         width: '100%',
 
     } );
     splide.mount();
   } );
 </script>
+<?php } ?>

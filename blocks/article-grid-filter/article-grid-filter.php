@@ -120,7 +120,7 @@ if ( ! empty( $block['align'] ) ) {
 
                     // Make an AJAX request to the WordPress REST API
                     $.ajax({
-                        url: '<?php echo esc_url( rest_url( 'custom/v1/endpoint/' ) ); ?>',
+                        url: '<?php echo esc_url( rest_url( 'wbdv/v1/article-filter/' ) ); ?>',
                         method: 'GET',
                         data: {
                             'anlass': anlass,
@@ -149,10 +149,27 @@ if ( ! empty( $block['align'] ) ) {
 
 
 
-                                    html += '<div class="post">';
-                                    html += '<h2>' + post.title + '</h2>';
-                                    html += '<a href="'+ post.title+'">more</a>';
-                                    html += '</div>';
+                                    html += `
+                                    <article class="article-list-item " data-aos="fade-up">
+
+                                            <figure class="thumbnail">
+                                                <a href="${post.permalink}"><img src="${post.thumbnail}" /></a>
+                                            </figure>
+
+                                        <div class="info">
+                                            <h3>
+                                                <a href="${post.permalink}">${post.title}</a>
+                                            </h3>
+                                            <div class="excerpt">${post.excerpt} <a href="${post.permalink}" class="excerpt_more"></a></div>
+                                            <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-layout-2 wp-block-buttons-is-layout-flex">
+                                                <div class="wp-block-button">
+                                                    <a class="wp-block-button__link wp-element-button" href="${post.permalink}">mehr lesen</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </article>
+                                    `
                                 });
                                 $('.wrap').html(html);
                             } else {
