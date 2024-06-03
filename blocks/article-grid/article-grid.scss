@@ -4,6 +4,6 @@
 .block-article-grid {
 
     .wp-block-buttons{
-        margin-top: 50px;
+        margin-top: var(--wp--style--block-gap);
     }
 }

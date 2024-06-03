@@ -26,15 +26,9 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
-?>
+$attrs = $is_preview ? ' class="'.esc_attr( $classes ).'" ' : get_block_wrapper_attributes([ 'class' => $classes]); ?>
 
-<style type="text/css">
-	<?php echo '#' . $id; ?> {
-		/* Add styles that use ACF values here */
-	}
-</style>
-
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+<div id="<?php echo esc_attr( $id ); ?>" <?php echo $attrs; ?>  >
 	<?php if ( have_rows( 'testimonials' ) ) : ?>
 		<div id="testimonials_slider<?=$rand_num;?>" class="splide" aria-label="Testimonials slider">
             <div class="splide__track">

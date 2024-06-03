@@ -1,2 +1,2 @@
-.block-article-slider .wp-block-buttons{margin-top:50px}
+.block-article-slider .wp-block-buttons{margin-top:var(--wp--style--block-gap)}
 /*# sourceMappingURL=article-slider.css.map */

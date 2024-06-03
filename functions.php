@@ -157,3 +157,50 @@ function acf_load_post_types($field)
     // return the field
     return $field;
 }
+
+
+
+class WBDV_Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+
+    private $last_top_id = 0;  //
+
+    // Start element function
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        parent::start_el($output, $item, $depth, $args, $id);
+        if ($depth == 0) {  // Check if it's a top-level menu item
+            $this->last_top_id = $item->ID;  // Store the ID
+        }
+
+        if ($args->walker->has_children) {
+
+            $output .= "<span class='sub-toggle'></span>";
+
+        }
+    }
+
+    /*
+    // Start Level
+    function start_lvl( &$output, $depth = 0, $args = null ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='submenu-wrapper'><div class=inner><ul class='sub-menu'>\n";
+    }
+
+
+
+    // End level function
+    function end_lvl(&$output, $depth = 0, $args = null) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>";
+        if ($depth === 0) { // Adds div after top-level ul
+            // Fetch the ACF field value for the last top level item
+            $after_children_content = '';
+            $after_children_content = get_field('description', $this->last_top_id);
+            $output .= "<div class='after-menu'>{$after_children_content}</div>\n";
+
+            // Optionally, remove the echo statement or adjust it for debugging
+            // echo "<pre>"; print_r($args); echo "</pre>";
+        }
+        $output .= "</div></div>\n";
+    }
+    */
+}

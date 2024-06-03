@@ -24,10 +24,9 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
-?>
+$attrs = $is_preview ? ' class="'.esc_attr( $classes ).'" ' : get_block_wrapper_attributes([ 'class' => $classes]); ?>
 
-
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+<div id="<?php echo esc_attr( $id ); ?>" <?php echo $attrs; ?>  >
 	<?php if ( have_rows( 'logos' ) ) : ?>
 		<?php while ( have_rows( 'logos' ) ) : the_row(); ?>
 			<?php $image = get_sub_field( 'image' ); ?>

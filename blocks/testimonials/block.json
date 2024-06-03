@@ -12,7 +12,14 @@
     },
     "supports": {
         "align": true,
-        "anchor": true
+        "anchor": true,
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": true
+        }
     },
     "styles": [
         { "name": "default", "label": "Default", "isDefault": true },

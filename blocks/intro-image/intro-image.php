@@ -25,8 +25,9 @@ if ( ! empty( $block['className'] ) ) {
 }
 $classes .= ' alignfull ';
 
-?>
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+$attrs = $is_preview ? ' class="'.esc_attr( $classes ).'" ' : get_block_wrapper_attributes([ 'class' => $classes]); ?>
+
+<div id="<?php echo esc_attr( $id ); ?>" <?php echo $attrs; ?>  >
 
 
     <?php if(get_field( 'type' ) == 'images') {?>

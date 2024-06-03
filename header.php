@@ -36,7 +36,8 @@
 			<?php
 				wp_nav_menu( array(
 					'container'         => 'nav',
-					'theme_location'    => 'primary'
+					'theme_location'    => 'primary',
+					'walker'         => new WBDV_Custom_Walker_Nav_Menu(),
 				) );
 			?>
 

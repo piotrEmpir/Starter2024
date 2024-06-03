@@ -1,2 +1,2 @@
-.block-article-grid .wp-block-buttons{margin-top:50px}
+.block-article-grid .wp-block-buttons{margin-top:var(--wp--style--block-gap)}
 /*# sourceMappingURL=article-grid.css.map */

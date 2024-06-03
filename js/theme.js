@@ -30,4 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
             acContent.style.display = acContent.style.display === "none" ? "block" : "none";
         });
     });
+
+
+    let subToggles = document.querySelectorAll('.sub-toggle');
+    subToggles.forEach(function (subToggle) {
+        subToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            let parent = this.parentNode;
+            parent.classList.toggle('active');
+        });
+    });
+
 });

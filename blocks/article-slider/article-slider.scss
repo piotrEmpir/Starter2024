@@ -3,6 +3,6 @@
 
 .block-article-slider {
     .wp-block-buttons{
-        margin-top: 50px;
+        margin-top: var(--wp--style--block-gap);
     }
 }
